@@ -1,4 +1,5 @@
 library(RColorBrewer)
+library(googleVis)
 
 paises<-read.csv("/Users/sciruela/Documents/footballFans/paises.csv",sep=",")
 
@@ -12,3 +13,4 @@ pdf("/Users/sciruela/Documents/footballFans/grafico.pdf")
 symbols(paises$evolucion,paises$asistencia,circles=radius,inches=0.35,fg="white",bg=pal2[paises$coloraforo],xlab="DISMINUCION DE ASISTENCIA",ylab="ASISTENCIA A LOS CAMPOS")
 text(paises$evolucion,paises$asistencia, paises$pais, cex=0.5)
 dev.off()
+
